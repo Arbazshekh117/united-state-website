@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shekh Arbaz — Portfolio Website</title>
+  <meta name="description" content="Official portfolio website of Shekh Arbaz — Web Designer and Developer based in United States." />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    a{color:inherit;text-decoration:none}
+
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#7c3aed;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+    }
+    body{background:linear-gradient(180deg,var(--bg),#061028);color:#e6eef8;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.35), transparent);backdrop-filter:blur(6px);z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none}
+    .cta{padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);font-weight:600}
+    .menu-btn{display:none}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero-card{background:var(--glass);padding:28px;border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    h1{font-size:2.1rem;margin-bottom:8px}
+    p.lead{color:var(--muted);margin-bottom:18px}
+    .btn-row{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .pf-item{height:140px;border-radius:10px;background-size:cover;background-position:center}
+
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    .submit{padding:10px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;color:#041025;font-weight:700}
+
+    footer{padding:24px 0;color:var(--muted);font-size:0.95rem}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .portfolio,.grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      nav ul{display:none}
+      .menu-btn{display:block}
+      .portfolio,.grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div>
+          <div style="font-weight:700">Shekh Arbaz</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Web Designer • Developer • United States</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="cta" href="#contact">Contact Me</a>
+        <button class="menu-btn" aria-label="menu" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Hi, I'm Shekh Arbaz — Web Designer & Developer from United States</h1>
+        <p class="lead">Main responsive websites aur modern UI design banata hoon. Aap mere portfolio aur contact info neeche dekh sakte ho.</p>
+        <div class="grid-3">
+          <div class="card">
+            <strong>Fast</strong>
+            <p style="color:var(--muted);font-size:0.95rem">Optimized single-file layout for quick deployment.</p>
+          </div>
+          <div class="card">
+            <strong>Responsive</strong>
+            <p style="color:var(--muted);font-size:0.95rem">Mobile-first design — har device pe perfect view.</p>
+          </div>
+          <div class="card">
+            <strong>Customizable</strong>
+            <p style="color:var(--muted);font-size:0.95rem">Easily change colours, fonts, and images as you like.</p>
+          </div>
+        </div>
+        <div style="margin-top:18px" class="btn-row">
+          <a class="btn" href="#portfolio">View Portfolio</a>
+          <a class="btn" href="#contact">Contact Now</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="padding:18px">
+          <h3 style="margin-bottom:8px">Quick Contact</h3>
+          <p style="color:var(--muted);margin-bottom:12px">Form bhar ke muje seedha email bhejo — ya button se WhatsApp bhi kar sakte ho.</p>
+          <a class="cta" href="mailto:db648612@gmail.com">Email bhejo</a>
+          <div style="height:12px"></div>
+          <a class="btn" href="https://wa.me/9176981282078" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 style="margin-top:22px">Services</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px">
+        <div class="card"><strong>Website Design</strong><p style="color:var(--muted)">Custom designs & responsive layout.</p></div>
+        <div class="card"><strong>Development</strong><p style="color:var(--muted)">HTML, CSS, JS, or React — jo chahiye.</p></div>
+        <div class="card"><strong>SEO & Support</strong><p style="color:var(--muted)">Basic on-page SEO aur maintenance.</p></div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2 style="margin-top:18px">Portfolio</h2>
+      <div class="portfolio" style="margin-top:12px">
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1523475496153-3d6cc3d4b2b5?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1522202195461-7b13e8f8b4a8?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60')"></div>
+        <div class="pf-item" style="background-image:url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=60')"></div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Contact Me</h2>
+      <p style="color:var(--muted)">Neeche form bhar ke muje message bhejo — ya seedha email/WhatsApp use karo.</p>
+
+      <div class="card" style="margin-top:10px">
+        <form onsubmit="submitForm(event)">
+          <input id="name" placeholder="Aapka naam" required />
+          <input id="email" type="email" placeholder="Email" required />
+          <textarea id="message" rows="5" placeholder="Message" required></textarea>
+          <button class="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px">
+        <div>© <span id="year"></span> Shekh Arbaz. All rights reserved — United States.</div>
+        <div style="color:var(--muted)">Made with care • Personal Portfolio</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.querySelector('nav ul');
+      if(!nav) return;
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.background = 'rgba(7,13,23,0.6)';
+      nav.style.position = 'absolute';
+      nav.style.right = '16px';
+      nav.style.top = '64px';
+      nav.style.padding = '12px';
+      nav.style.borderRadius = '10px';
+    }
+
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website contact from '+name);
+      const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
+      window.location.href = 'mailto:db648612@gmail.com?subject='+subject+'&body='+body;
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
